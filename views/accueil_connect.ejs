@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--<link href="../styles/style_accueil.css" rel="stylesheet" type="text/css" media="screen" /> -->
+<link rel="stylesheet" href="/static/styles/style_accueil.css">
+<link rel="stylesheet" href="/static/styles/style_choice.css">
+<script type="text/javascript" src="/static/script/script_actions.js"></script>
+<link rel="stylesheet" href="/static/styles/style_menu.css">
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>ACCUEIL</title>
+</head>
+
+<body>
+
+
+
+  
+
+  <%- include('menu') -%>
+
+  
+  <!--on inclut le menu commun à toutes les pages
+  <h5><%= locals.user ? user : "User" %></h5>
+  -->
+
+  <div id="main">
+    <br>
+    <section class="corps">
+      <h1>Bienvenue <%= locals.user ? user : "User" %> !</h1><br>
+      <p>
+      <h3>Pour jouer, entrez un thème ci-dessous et choisissez le niveau de difficulté.</h3> <br>
+
+      
+      <!--on inclut le fichier qui gère le jeu-->
+      
+      </p>
+      <form  action="/route/game" method="GET">
+        
+        <label for="tag" class="form_title">Mot Clé</label><br>
+        <input type="text" id="tag" name="tag" required placeholder="thème"><br><br>
+
+        <label for="taille" class="form_title">Choix taille (1, 2 ou 3):</label><br>
+        <input type="radio" id="1" name="taille" value="1" required>
+        <label for="1" class="niveau">Facile</label><br>
+        <input type="radio" id="2" name="taille" value="2">
+        <label for="2" class="niveau">Moyen</label><br>
+        <input type="radio" id="3" name="taille" value="3">
+        <label for="3" class="niveau">Difficile</label><br>
+
+        <input type="submit" value="Valider"/>
+    </form>
+
+      <div id="aide">
+        <span>Besoin d'aide </span>
+        <a href="apropos.php#comment"><img src="/static/images/question_mark.png" alt="?" id="question_mark" title="consulter la documentation"></a>
+      </div>
+
+    </section>
+
+    <!--bouton qui permet de retourner en haut de la page-->
+    <!--ne s'affiche que lorsque qu'on a fait défilé la page-->
+    <p id="bouton_retour_haut"><img src="/static/images/up_arrow.png" alt="Retour en haut" title="Retour en haut" OnClick="to_the_top()"></p>
+  </div>
+
+
+  <footer>
+    <span>2022</span>
+    <span><a href="/">Accueil</a></span>
+    <span><a href="equipe">L'équipe</a></span>
+  </footer>
+
+</body>
+
+</html>

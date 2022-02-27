@@ -1,0 +1,62 @@
+html, body {
+  height: 100%; /*précisé pour pouvoir positionner le footer tout en bas*/
+}
+body {
+  display: flex; /*précisé pour pouvoir positionner le footer tout en bas*/
+  flex-direction: column; /*précisé pour pouvoir positionner le footer tout en bas*/
+  /* background: url("/images/illustration_memory.png"); */
+  background: url("/static/images/memo2.png") ;
+}
+
+#main {
+  padding-left: 10px; /*décalage sinon texte trop sur collé au bord*/
+  overflow-wrap: break-word; /*coupe le mot sinon ça déborde sur le côté*/
+}
+
+/*fond blanc avec coins arrondis et cadre noir*/
+.corps {
+  background: #ffffff;
+  margin: 80px 280px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  border: 3px solid black;
+}
+
+/*aligner l'image et le texte*/
+#aide {
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
+}
+
+#question_mark {
+  margin-left: 10px;
+  width: 25px;
+  height: 25px;
+}
+
+#bouton_retour_haut {
+  display: none; /*au départ on ne le voit pas*/
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  cursor: pointer; /*quand on passe la souris dessus, elle change pour montrer qu'on peut cliquer*/
+}
+
+footer {
+  margin-top: auto;
+  background: #68b1b8;
+  color: white;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between; /*pour que les éléments soient répartis équitablement*/
+  height:60px; 
+
+  /*décalages sur les côtés*/
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+footer a {
+  color: white; /*éléments liens du footer en blanc*/
+}

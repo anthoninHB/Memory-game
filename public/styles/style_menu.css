@@ -1,0 +1,147 @@
+*{
+  margin: 0;
+  padding: 0; 
+  box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
+}
+
+.my_header
+{
+  height: 80px;
+  background: url("/static/images/ligne.png");
+  background-position: 0px 30px; /*on met la ligne en bas du header*/
+  background-color: #68b1b8;
+}
+
+.titre_header 
+{ 
+  font-size: 200%;
+  font-weight: bold;
+  text-align: center;
+  line-height: 80px; /*permet de positionner verticalement */  
+} 
+
+a
+{
+  text-decoration: none; /*liens non soulignés*/
+  color: black /*liens en noir */
+}
+
+.wrapper{
+  position: fixed;
+  right: -100%; /*le menu est "caché" en dehors de l'écran*/
+  height: 100%; /*remplit tout l'écran*/
+  width: 100%; /*remplit tout l'écran*/
+  background: #000;
+  transition: all 0.6s ease-in-out; /*transition d'ouverture et fermeture*/
+}
+
+#active:checked ~ .wrapper{
+  right:0; /*lorsque menu ouvert, aucun décalage à droite*/
+}
+
+.menu-btn{
+  position: absolute;
+  z-index: 2;
+  right: 1px; /*situé à droite*/
+  height: 45px;
+  width: 50px;
+  border-radius: 50%; /*bord du fond arrondi*/
+  cursor: pointer; /*quand on passe la souris, curseur change pour montrer que l'on peut cliquer*/
+}
+
+.menu-btn:hover{
+  background-color: rgba(255, 255, 255, 0.795); /*quand on passe la souris --> fond blanc*/
+}
+
+.menu-btn span,
+.menu-btn:before,
+.menu-btn:after{
+  /*menu burger*/
+  content: "";
+  border-bottom: 2px solid #000;
+
+  position: absolute;
+  top: calc(50% - 1px); /*décalage avec le haut de la page*/
+  left: 30%;
+  width: 40%;
+  transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1); /*transition du burger à la croix*/
+}
+
+.menu-btn:before{
+  transform: translateY(-8px);
+}
+
+.menu-btn:after{
+  transform: translateY(8px);
+}
+
+.close {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+/*       closing animation       */
+#active:checked + .menu-btn span {
+  transform: scaleX(0);
+}
+#active:checked + .menu-btn:before {
+  transform: rotate(45deg);
+  border-color: #fff;
+}
+#active:checked + .menu-btn:after {
+  transform: rotate(-45deg);
+  border-color: #fff;
+}
+/**********************************/
+
+/*éléments du menu*/
+.wrapper ul{
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  height: 90%;
+  transform: translate(-50%, -50%);
+  list-style: none; /*aucun style pour la liste (pas de puces etc)*/
+  text-align: center;
+}
+
+.wrapper ul li{
+  height: 10%; /*hauteur des éléments du menu*/
+  margin: 15px 0;
+}
+
+.wrapper ul li a{
+  font-size: 30px;
+  padding: 5px 30px; /*décalage avec le fond*/
+  color: #fff;
+  position: relative; /*pour que le fond s'affiche correctement*/
+  margin: 5px 30px;
+  transition: opacity 1.2s, transform 1.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform: translateX(100px);
+}
+
+/*fond blanc quand souris sur un élément du menu*/
+.wrapper ul li a:after{
+  position: absolute;
+  content: "";
+  background: #ffffff;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  border-radius: 50px;
+  transform: scaleY(0);
+  z-index: -1; /*moins important donc situé en arriere plan*/
+  transition: transform 0.3s ease;
+}
+.wrapper ul li a:hover:after{
+  transform: scaleY(1);
+}
+.wrapper ul li a:hover{
+  color: #68b1b8; /*couleur éléments menu quand souris dessus*/
+}
+
+input[type="checkbox"]{
+  display: none; /*checkbox cachée*/
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<link href="/static/styles/style_apropos.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="/static/script/script_actions.js"></script>
+<link rel="stylesheet" href="/static/styles/style_apropos.css">
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>À propos</title>
+</head>
+
+<body>
+
+  <header>
+    <?php include('menu.html'); ?>
+    <%- include('menu') -%>
+    <!--on inclut le menu commun à toutes les pages-->
+  </header>
+
+  <div id="main">
+    <section>
+      <h1>À propos du jeu</h1>
+
+      <div id="sommaire">
+        Sommaire <br><br>
+        <ol>
+          <li><a href="#principe">Principe</a></li>
+          <li><a href="#regles">Règles du jeu</a></li>
+          <li><a href="#comment">Comment jouer au memory en ligne ?</a></li>
+          <li><a href="#avantages">Les avantages</a></li>
+        </ol>
+      </div>
+
+      <img src="/static/images/cards.png" id="cards">
+
+      <h2 id="principe">Principe</h2>
+      <hr>
+
+      <p class="paragraphe_1">
+        <span>Le jeu memory est énormément connu et son principe est très simple : collecter les paires correspondantes. Le jeu se joue habituellement à plusieurs (aucune limite du nombre de joueurs), bien qu’il soit également possible d’y jouer seul.</span>
+        <span>Ce jeu se joue souvent avec des cartes spécifiques, disponibles à l’achat dans divers commerces (de nombreux thèmes existent), mais l’on peut se débrouiller avec un jeu de cartes classiques ou bien avec des photos ou dessins personnalisés. Tout compte fait, ce jeu ne requiert pas réellement de matériel précis.</span>
+      </p>
+
+      <img src="/static/images/rules.png" id="rules">
+
+      <h2 id="regles">Règles du jeu</h2>
+      <hr>
+
+      <p class="paragraphe_1">
+        <span>Les règles sont assez faciles et sont expliquées ci-dessous pour une version multijoueur. Le jeu démarre avec toutes les cartes étalées faces cachées devant les joueurs. Une première personne va retourner deux cartes, de façon à ce qu’elles soient visibles pour tous. Si l’illustration est identique sur les deux, le joueur les récupère et rejoue. Sinon il les replace face cachée à l'endroit exact où elles étaient. Ensuite, c’est au tour du joueur suivant et ainsi de suite jusqu’à ce que l’ensemble des paires ait été trouvé. Le gagnant est celui qui a trouvé le plus de paires.</span>
+      </p>
+
+      <h2 id="comment">Comment jouer au memory en ligne ?</h2>
+      <hr>
+
+      <p class="paragraphe_1">
+        <span>Ici, nous vous proposons une version en ligne où les cartes habituelles sont remplacées par des images présentes sur Internet.</span>
+        <span>Pour jouer, rien de compliqué : vous entrez tout d’abord votre nom puis un mot-clé qui définira le thème de votre partie de memory. Enfin, il vous faudra choisir un niveau de difficulté qui fixera la taille de la grille : une grille facile correspond à 16 cartes, moyenne à 30 cartes et difficile à 40.</span>
+        <span>Ensuite, vous validez vos choix et pouvez commencer à <u><a href="../pages/accueil.php" title="retour à l'accueil">jouer</a></u> !</span>
+      </p>
+
+      <h2 id="avantages">Ses avantages</h2>
+      <hr>
+
+      <p class="paragraphe_1">
+        <span>Ce jeu peut paraître enfantin au premier abord, mais il est un excellent exercice pour la mémoire ! Une étude de l’université de Toronto (<i><u><a href="https://www.cmaj.ca/content/185/10/881" target="_blank">source</a></i></u>) a démontré que la pratique d’une activité stimulant le cerveau tout au long de sa vie permet d’en améliorer les capacités. Les jeux de mémoire deviennent alors très utiles et peuvent même aider à retarder et lutter contre la maladie d’Alzheimer. Voyons plus en détail les bienfaits du memory, aussi bien pour les enfants que pour les personnes âgées.</span>
+      </p>
+
+      <img src="/static/images/children_playing.jpg" id="children_playing">
+
+      <h3>Pour les enfants
+        <hr>
+      </h3>
+
+      <p class="paragraphe_2">
+        <span>La mémoire est une faculté qui se développe progressivement et naturellement chez les enfants. Elle permet d’avoir des souvenirs, aide à améliorer leur compréhension du monde qui les entoure et joue un rôle essentiel pour leur apprentissage. La mémoire est également un indicateur qui permet de s’assurer que les fonctions cérébrales fonctionnent correctement. Jouer au memory est alors un moyen efficace et amusant pour renforcer cette capacité, auquel sont associés plusieurs avantages :</span>
+      <ul id="liste_avantages">
+        <li>Amélioration de la concentration</li>
+        <li>Amélioration de la mémoire visuelle</li>
+        <li>Amélioration des capacités cognitives</li>
+        <li>Développement du raisonnement</li>
+        <li>Stimulation de la fonctionnalité du cerveau des enfants</li>
+      </ul>
+      </p>
+
+      <img src="/static/images/cerveau_stimul.png" id="cerveau_stimul">
+
+      <h3>Pour les séniors
+        <hr>
+      </h3>
+
+      <p class="paragraphe_2">
+        <span>La mémoire déclinant avec l’âge, il est important de la stimuler au maximum pour la conserver. La capacité à saisir des concepts et à intégrer des informations n’est plus aussi simple qu’avant et les jeux qui étaient déjà utiles pendant l’enfance deviennent alors de parfaits outils pour entretenir la mémoire des personnes âgées. Ainsi, le memory est un bon moyen pour lutter contre ces problèmes car il sollicite la capacité de réflexion, de mémoire et de stockage d’informations. Qui plus est, une étude de l’INSERM (<i><u><a href="https://www.inserm.fr/dossier/alzheimer-maladie/" target="_blank">source</a></i></u>) explique que stimuler le cerveau en lui proposant des activités peut ralentir l’évolution de la maladie d’Alzheimer.</span>
+        <span>Jouer entraîne une stimulation cérébrale et contribue à l’entretien des fonctions cognitives, tout en encourageant les liens sociaux. En effet, certaines personnes âgées peuvent souffrir de solitude et jouer devient alors un excellent outil pour maintenir une relation sociale.</span>
+        <span>Le memory exige de se souvenir de gestes et d’actions, ce qui fait travailler la mémoire récente et le sens de l’observation. Il est doublement bénéfique, aussi bien pour lutter contre la maladie d’Alzheimer que pour entretenir des liens sociaux.</span>
+      </p>
+
+    </section>
+
+    <!--bouton qui permet de retourner en haut de la page-->
+    <!--ne s'affiche que lorsque qu'on a fait défilé la page-->
+    <p id="bouton_retour_haut"><img src="/static/images/up_arrow.png" alt="Retour en haut" title="Retour en haut" OnClick="to_the_top()"></p>
+
+
+    <div id="marge"></div>
+  </div>
+</body>
+
+
+
+<footer>
+  <span>2022</span>
+  <span><a href="../pages/accueil.php">Memory</a></span>
+  <span><a href="../pages/equipe.php">L'équipe</a></span>
+</footer>
+
+</html>

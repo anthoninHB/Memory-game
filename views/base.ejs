@@ -1,0 +1,68 @@
+<%- include('header') -%>
+
+
+<div class="text-center center-div" id="login">
+    <div class="container w-25 border py-5">
+        <div class="title pb-5">
+            <h2 class="font-weight-bold">Connexion</h2>
+            <span>Connexion pour ceux ayant un compte</span>
+            <% if(locals.logout){ %>
+                <div class="alter alert-success text-center">
+                    <%= logout %>
+                </div>
+            <% } %>
+            
+
+
+
+        </div>
+
+        
+
+
+        <% if(locals.signin){ %>
+            <div class="alter alert-success text-center">
+                <%= signin %>
+            </div>
+            <form action="/route/signin_conf" method="POST" class="pt-3">
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="email" name="email">
+                    <small class="form-text text-muted text-left">Register email address</small>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" name="password" placeholder="mot de passe">
+                </div>
+                <button type="submit" class="btn btn-success rounded-pill">Submit</button>
+                
+            </form>
+        <% } %>
+
+      
+            
+            <form action="/route/login" method="POST" class="pt-3">
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="email" name="email">
+                    <small class="form-text text-muted text-left">Register email address</small>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" name="password" placeholder="password">
+                </div>
+                <button type="submit" class="btn btn-success rounded-pill">Submit</button>
+                
+            </form>
+        
+
+        
+            
+                <form action="/route/signin" method="POST" class="pt-4">
+                    <small class="form-text text-muted text-left">Pas  encore inscrit ? Enregistre Toi !</small>
+                    <button type="submit" class="btn btn-success rounded-pill">SignIN</button>
+                    
+                </form>
+        
+
+    </div>
+</div>
+
+
+<%- include('footer') -%>

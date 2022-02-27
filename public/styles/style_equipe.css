@@ -1,0 +1,116 @@
+html, body {
+    height: 100%; /*précisé pour pouvoir positionner le footer tout en bas*/
+}
+body {
+    display: flex; /*précisé pour pouvoir positionner le footer tout en bas*/
+    flex-direction: column; /*précisé pour pouvoir positionner le footer tout en bas*/
+    background: url("/static/images/memo2.png") ;
+}
+  
+#main {
+    padding-left: 10px; /*décalage sinon texte trop sur collé au bord*/
+    overflow-wrap: break-word; /*coupe le mot sinon ça déborde sur le côté*/
+}
+  
+/*fond blanc avec coins arrondis et cadre noir*/
+.corps {
+    background: #ffffff;
+    margin: 80px 280px;
+    padding: 20px 30px;
+    border-radius: 10px;
+    border: 3px solid black;
+}
+
+.section_equipe {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.section_nous {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 150%;
+    margin: 20px 0;
+    transition: 0.5s; /*transition quand on "part" de l'image*/
+}
+
+.section_nous:hover {
+    transform: scale(1.5);
+    transition: 0.8s; /*transition quand on arrive sur l'image*/
+}
+
+.section_nous .content {
+    display: none;
+    position:absolute;
+    font-size: 90%;
+    top:10%;
+    left: 100%;
+    background-color:white;
+    width:300px;
+    height:120px;
+    border: 3px solid black;
+    border-radius: 4px;
+    padding: 5px 5px;
+    text-align:center;
+}
+
+
+.section_nous:hover .content{ 
+    display: block;
+}    
+
+/*quand on passe la souris sur le texte, il disparait*/
+.section_nous .content:hover{ 
+    display: none;
+}    
+
+.section_nous .content_right {
+    display: none;
+    position:absolute;
+    font-size: 90%;
+    top:10%;
+    right: 100%;
+    background-color:white;
+    width:300px;
+    height:120px;
+    border: 3px solid black;
+    border-radius: 4px;
+    padding: 5px 5px;
+    text-align:center;
+}
+
+
+.section_nous:hover .content_right{ 
+    display: block;
+} 
+
+
+#bouton_retour_haut {
+    display: none; /*au départ on ne le voit pas*/
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    cursor: pointer; /*quand on passe la souris dessus, elle change pour montrer qu'on peut cliquer*/
+}
+  
+footer {
+    margin-top: auto;
+    background: #68b1b8;
+    color: white;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between; /*pour que les éléments soient répartis équitablement*/
+    height:60px; 
+  
+    /*décalages sur les côtés*/
+    padding-right: 50px;
+    padding-left: 50px;
+}
+  
+footer a {
+    color: white; /*éléments liens du footer en blanc*/
+}
+  

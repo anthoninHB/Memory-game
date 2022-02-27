@@ -1,0 +1,27 @@
+html, body {
+  height: 100%; /*précisé pour pouvoir positionner le footer tout en bas*/
+}
+body {
+  display: flex; /*précisé pour pouvoir positionner le footer tout en bas*/
+  flex-direction: column; /*précisé pour pouvoir positionner le footer tout en bas*/
+  /* background: url("/images/illustration_memory.png"); */
+  background: url("../images/memo2.png") ;
+}
+
+#title {
+    margin-left: auto;
+    margin-right: auto;
+      overflow-wrap: break-word; /*coupe le mot sinon ça déborde sur le côté*/
+}
+
+/*fond blanc avec coins arrondis et cadre noir*/
+.corps {
+    margin-top: 0%;
+    margin-left: auto;
+    margin-right: auto;
+  background: #ffffff;
+  padding: 1% 2%;
+  border-radius: 100px;
+  border: 6px solid black;
+}
+

@@ -1,0 +1,46 @@
+input[type=text] {
+    border: 1px solid rgb(0, 0, 0); /*style de la bordure*/
+    border-radius: 4px; /*coins arrondis*/
+    padding: 5px; /*hauteur boîte*/
+    margin-bottom: 20px; 
+}
+
+input[type=text]:hover {
+    background: rgba(235, 233, 233, 0.418); /*quand on passe la souris dessus, fond modifié*/
+}
+
+.form_title {
+    font-weight: bold;
+    margin: 10px 0;
+    display:inline-block; /*à ajouter pour que le margin fonctionne*/
+} 
+
+input[type=radio] {
+    margin: 10px 0;
+}
+
+input[type=radio]:checked + .niveau {
+    font-weight: bold; /*option choisie en gras*/
+} 
+
+.niveau {
+    font-family:Helvetica;
+}
+
+.niveau:hover {
+    font-weight: bold; /*quand on passe la souris dessus, texte en gras*/
+}
+
+input[type=submit] {
+    background-color: #89b5d3;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 18px;
+    border: none;
+    border-radius: 4px; /*bord arrondi*/
+    cursor: pointer; /*quand on passe la souris dessus, icône modifié*/
+}
+
+input[type=submit]:hover {
+    background: cornflowerblue; /*quand on passe la souris dessus, couleur du fond modifiée*/
+}

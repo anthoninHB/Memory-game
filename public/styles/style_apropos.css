@@ -1,0 +1,155 @@
+html, body {
+  height: 100%; /*précisé pour pouvoir positionner le footer tout en bas*/
+}
+body {
+  display: flex; /*précisé pour pouvoir positionner le footer tout en bas*/
+  flex-direction: column; /*précisé pour pouvoir positionner le footer tout en bas*/
+}
+
+#main {
+  background-image: url("/static/images/memo2.png");
+  padding-top: 30px;
+  overflow-wrap: break-word; /*coupe le mot sinon ça déborde sur le côté*/
+
+  /*décalage sinon texte trop sur collé au bord*/
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+/*fond blanc avec coins arrondis et cadre noir*/
+section {
+  background: #ffffff;
+  margin: 80px 280px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  border: 3px solid black;
+}
+
+h1 {
+  font-size: 200%;
+}
+
+#sommaire {
+  margin-top: 30px;
+  margin-bottom: 60px;
+  width: fit-content;
+  border: 5px solid rgb(0, 0, 0); /*cadre*/
+  border-radius: 4px;
+  padding: 25px; /*décalage entre texte et cadre*/
+  font-size: large;
+}
+
+#sommaire li {
+  list-style-position: inside; /*sans ça numéros ne s'affichent pas*/
+}
+
+h2, h3 {
+  color: #185955e1;
+  margin-top: 40px; /*décalage avec élément situé au dessus*/
+}
+
+h3 {
+  text-indent: 2em; /*alinéa*/
+}
+
+h3 hr {
+  margin-left: 2em; /*décalage de la ligne horizontale pour qu'elle soit alignée avec le titre*/
+}
+
+.paragraphe_1 {
+  text-align: justify;
+  text-indent: 2em; /*alinéa*/
+  margin: 20px 0; 
+  font-size: large;
+}
+
+.paragraphe_2 {
+  text-align: justify;
+  text-indent: 4em; /*alinéa*/
+  margin-top: 10px; 
+  margin-left: 2em;
+  font-size: large;
+}
+
+/*      images      */
+#cards {
+  float: right;
+  width: 200px;
+  height: 200px;
+  margin-left: 10px;
+  transition: 0.3s;
+}
+
+#rules {
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+#children_playing {
+  float: right;
+  width: 244.8px; /*612 à l'origine*/
+  height: 172.4px; /*431 à l'origine*/
+  margin-left: 10px;
+  transition: 0.3s;
+}
+
+#cerveau_stimul {
+  float: left;
+  width: 192px; /*960 à l'origine*/
+  height: 108px; /*540 à l'origine*/
+  margin-top: 30px;
+  margin-right: -20px;
+  transition: 0.3s;
+}
+
+#cards:hover, #rules:hover, #cerveau_stimul:hover {
+  transform: scale(1.9);
+  transition: 0.3s;
+}
+
+#children_playing:hover {
+  transform: scale(1.4);
+  border-radius: 35%;
+  transition: 0.3s;
+}
+/********************/
+
+#liste_avantages {
+  margin-top: 10px;
+  margin-left: 6em;
+  font-size: large;
+}
+
+#bouton_retour_haut
+{
+  display: none; /*au départ on ne le voit pas*/
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  cursor: pointer; /*quand on passe la souris dessus, elle change pour montrer qu'on peut cliquer*/
+}
+
+#marge {
+  margin-bottom: 100px; /*ajout d'un espace avec le footer*/
+}
+
+footer {
+  margin-top: auto;
+  background: #68b1b8;
+  color: white;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between; /*pour que les éléments soient répartis équitablement*/
+  height:60px; 
+
+  /*décalage sur les côtés*/
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+footer a {
+  color: white;
+}
